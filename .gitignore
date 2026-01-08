@@ -3,9 +3,11 @@
 04.coding/
 05.sets/
 student_books/
+gen_subsets/
 
 # Компилационни файлове на C++
 *.log
+*.swp
 
 # Build директории
 build/

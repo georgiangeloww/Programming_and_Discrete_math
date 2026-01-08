@@ -1,0 +1,16 @@
+# Локални папки, които не искам в GitHub
+01.Lcd_and/
+04.coding/
+05.sets/
+student_books/
+
+# Компилационни файлове на C++
+*.log
+
+# Build директории
+build/
+bin/
+
+# IDE / OS файлове
+.vscode/
+.DS_Store

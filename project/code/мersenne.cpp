@@ -1,3 +1,8 @@
-#include <iostream>
+#include "mersenne.h"
 
-bool isMarsenneNumber(int num);
+bool isValidInput(int num){
+    return num >= 0;
+}
+
+
+

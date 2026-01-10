@@ -1,7 +1,16 @@
 #include "mersenne.h"
 
-bool isValidInput(int num){
+bool isValidInput(long long num){
     return num >= 0;
+}
+
+bool isMersenneNumber(long long num){
+    for(int p = 2; p < 62; p++){
+        long long marnms = (1LL << p) - 1;
+        if(num == marnms) return 1;
+        if(marnms > num) break;
+    }
+    return 0;
 }
 
 

@@ -1,4 +1,4 @@
 # pragma once
 
-bool isValidInput(int);
-bool isMarsenneNumber(int);
+bool isValidInput(long long);
+bool isMersenneNumber(long long);

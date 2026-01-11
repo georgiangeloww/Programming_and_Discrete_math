@@ -18,6 +18,13 @@ int main(){
         std::cout << "The number: " << num << " is not a Mersenne number\n";
     }
 
+    if(isMersennePrime(num)){
+        std::cout << "The number: " << num << " is a Mersenne prime\n";
+    }
+    else{
+        std::cout << "The number: " << num << " is not a Mersenne prime\n";
+    }
+
 
 
     return 0;

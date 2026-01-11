@@ -2,3 +2,4 @@
 
 bool isValidInput(long long);
 bool isMersenneNumber(long long);
+bool isMersennePrime(long long);

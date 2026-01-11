@@ -13,5 +13,17 @@ bool isMersenneNumber(long long num){
     return 0;
 }
 
+bool isMersennePrime(long long num){
+    if(!isMersenneNumber(num)) return 0;
+
+    for(long long i = 2; i * i < num; i++){
+        if(num % i == 0){
+            return 0;
+        }
+    }
+    return 1;
+}
+
+
 
 

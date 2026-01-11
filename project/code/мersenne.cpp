@@ -1,4 +1,5 @@
 #include "mersenne.h"
+#include <iostream>
 
 bool isValidInput(long long num){
     return num >= 0;
@@ -22,6 +23,22 @@ bool isMersennePrime(long long num){
         }
     }
     return 1;
+}
+
+void allDivisors(long long num){
+    bool isdivisors = 0;
+    for(long long i = 2; i < num; i++){
+        if(num % i == 0){
+            isdivisors = 1;
+            std::cout << i << " ";
+        }
+    }
+    if(isdivisors){
+        std::cout << "are divisors of: " << num << std::endl;
+    }
+    else{
+        std::cout << "There are not divisors of: " << num << std::endl;
+    }
 }
 
 

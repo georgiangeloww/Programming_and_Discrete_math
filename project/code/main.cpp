@@ -5,11 +5,17 @@ using std::endl;
 
 
 int main(){
+    const int MAX = 1000;
+    long long primedivArr[MAX];
+    int count = 0;
+    bool hasDivisors = 0;
+    long long num;
+
 
     cout << "Enter a number: ";
-    long long num;
     std::cin >> num;
-    
+
+
     if (!isValidInput(num)){
         std::cout << "Invalid input data!\n";
         return 1;
@@ -29,7 +35,19 @@ int main(){
         std::cout << "The number: " << num << " is not a Mersenne prime\n";
     }
 
-    allDivisors(num);
+    std::cout << "Divisors of " << num << ": ";
+    for(long long i = 2; i < num; i++){
+        if(isDivisors(num, i)){
+            hasDivisors = 1;
+            std::cout << i << " ";
+        }
+    }
+    cout << endl;
+    if(!hasDivisors){    
+        std::cout << "There are not divisors of: " << num << std::endl;
+    }
+
+    inputPrimeDivisors(num, primedivArr, count);
 
     return 0;
 }

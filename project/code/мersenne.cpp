@@ -81,6 +81,21 @@ void printFirstNMersenne(int n){
         }
         i++;
     }
-    
+
+    std::cout << std::endl;
+}
+
+void printFirstNMersennePrime(int n){
+    int count = 0;
+    long long i = 2;
+
+    while (count < n) {
+        if (isMersennePrime(i)) {
+            std::cout << i << " ";
+            count++;
+        }
+        i++;
+    }
+
     std::cout << std::endl;
 }

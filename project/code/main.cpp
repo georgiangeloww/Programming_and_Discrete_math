@@ -17,6 +17,7 @@ int main(){
     long long start;
     long long finish;
     int n;
+    int nPrimes;
 
 
 
@@ -33,6 +34,8 @@ int main(){
     std::cin >> finish;
     cout << "Enter the number of the first Mersenne numbers you want: ";
     std::cin >> n;
+    cout << "Enter the number of the first Mersenne prime numbers you want: ";
+    std::cin >> nPrimes;
 
 
 
@@ -87,6 +90,9 @@ int main(){
 
     cout << "First " << n << " Mersenne numbers: ";
     printFirstNMersenne(n);
+
+    cout << "First " << nPrimes << " Mersenne prime numbers : ";
+    printFirstNMersennePrime(n);
 
     return 0;
 }

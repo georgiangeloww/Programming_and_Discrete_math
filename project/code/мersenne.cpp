@@ -32,10 +32,40 @@ bool isDivisors(long long num, long long i){
     return num % i == 0;
 }
             
-void inputPrimeDivisors(long long num, long long primedivArr[], int &count){
+void fillPrimeDivisors(long long num, long long primedivArr[], int &count){
     for(long long i = 2; i <= num; i++){
         if(isDivisors(num, i) && isPrimeNumber(i)){
             primedivArr[count++] = i;
         }
     }
+}
+
+bool isComposite(int n){
+    if(n <= 3) return 0;
+    return !isPrimeNumber(n);
+}
+
+
+void fillUniqueDivisors(int diffnum1, int diffnum2, long long diffArr[], int &diffCount){
+    for(long long i = 2; i <= diffnum1; i++){
+
+        if(isDivisors(diffnum1, i) && isComposite(diffnum1)){
+
+            bool divInB = 0;
+            if(isDivisors(diffnum2, i) && isComposite(diffnum2)){
+                divInB = 1;
+            }
+
+            if(!divInB){
+                diffArr[diffCount++] = i;
+            }
+        }
+    }
+}
+
+bool isMersenneInterval(int start, int finish){
+    for(int i = start; i <= finish; i++){
+        if (isMersenneNumber(i)) return 1;
+    }
+    return 0;
 }

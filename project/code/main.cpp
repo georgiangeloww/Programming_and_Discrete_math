@@ -16,6 +16,7 @@ int main(){
     int diffnum2;
     long long start;
     long long finish;
+    int n;
 
 
 
@@ -30,6 +31,8 @@ int main(){
     std::cin >> start;
     cout << "Enter the finish of the interval for the search: ";
     std::cin >> finish;
+    cout << "Enter the number of the first Mersenne numbers you want: ";
+    std::cin >> n;
 
 
 
@@ -80,6 +83,10 @@ int main(){
         cout << "There are not Mersenne numbers in the interval from " << start << " to " << finish;
     }
     cout << endl;
+
+
+    cout << "First " << n << " Mersenne numbers: ";
+    printFirstNMersenne(n);
 
     return 0;
 }

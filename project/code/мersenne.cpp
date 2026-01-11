@@ -69,3 +69,18 @@ bool isMersenneInterval(int start, int finish){
     }
     return 0;
 }
+
+void printFirstNMersenne(int n){
+    int count = 0;
+    long long i = 2;
+
+    while (count < n) {
+        if (isMersenneNumber(i)) {
+            std::cout << i << " ";
+            count++;
+        }
+        i++;
+    }
+    
+    std::cout << std::endl;
+}

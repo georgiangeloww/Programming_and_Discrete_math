@@ -8,8 +8,10 @@ int main(){
     const int MAX = 1000;
     long long primedivArr[MAX];
     long long diffArr[MAX];
+    long long mersenneprimeArr[MAX];
     int count = 0;
     int diffCount = 0;
+    int primeCount = 0;
     bool hasDivisors = 0;
     long long num;
     int diffnum1;
@@ -18,6 +20,7 @@ int main(){
     long long finish;
     int n;
     int nPrimes;
+    int numPrimes;
 
 
 
@@ -36,7 +39,8 @@ int main(){
     std::cin >> n;
     cout << "Enter the number of the first Mersenne prime numbers you want: ";
     std::cin >> nPrimes;
-
+    cout << "Enter how many Mersenne prime numbers to store: ";
+    std::cin >> numPrimes;
 
 
     if (!isValidInput(num)){
@@ -93,6 +97,8 @@ int main(){
 
     cout << "First " << nPrimes << " Mersenne prime numbers : ";
     printFirstNMersennePrime(n);
+
+    fillMersennePrimes(numPrimes, mersenneprimeArr, primeCount);
 
     return 0;
 }

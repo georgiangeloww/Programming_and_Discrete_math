@@ -99,3 +99,15 @@ void printFirstNMersennePrime(int n){
 
     std::cout << std::endl;
 }
+
+void fillMersennePrimes(int n, long long arr[], int &count){
+    count = 0;
+    long long i = 2;
+
+    while (count < n) {
+        if (isMersennePrime(i)) {
+            arr[count++] = i;
+        }
+        i++;
+    }
+}

@@ -11,3 +11,5 @@ void fillUniqueDivisors(int diffnum1, int diffnum2, long long diffArr[], int &di
 bool isMersenneInterval(int start, int finish);
 void printFirstNMersenne(int n);
 void printFirstNMersennePrime(int n);
+void fillMersennePrimes(int n, long long arr[], int &count);        
+
